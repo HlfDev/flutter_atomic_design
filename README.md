@@ -1,65 +1,63 @@
+# **Design System with Atomic Design in Flutter**
 
-## **Design System com Atomic Design no Flutter**
+Nowadays, one of the most popular ways to organize and maintain components and modules used by design teams is Atomic Design, a file structure methodology that breaks down all the elements of a page. In this article, I briefly show how to structure a design system using the Atomic Design methodology in a Flutter project.
 
-![](https://cdn-images-1.medium.com/max/2000/1*DILXdTuV0VIvaRTNT0hOgA.png)
+## What is a Design System?
 
-Hoje em dia, uma das formas mais populares de organizar e manter componentes e módulos usados pelas equipes de design é o atomic design, uma metodologia de estrutura de arquivos que divide todos os elementos de uma página, neste artigo mostro de forma breve como fazer uma estrutura de um design system utilizando a metodologia do atomic design em um projeto flutter.
+![Design System](https://cdn-images-1.medium.com/max/2400/0*Ulv6WrzC80NrSydn)
 
-## O que é um Design System?
+A Design System is a collection of reusable components standardized for a specific product, website, or system. Unlike a style guide, a design system goes beyond aesthetics: it unifies the language of a product.
 
-![](https://cdn-images-1.medium.com/max/2400/0*Ulv6WrzC80NrSydn)
+Think of the design system not as a project but as an internal product of the company, requiring people to update it as they develop new solutions, new components, and new style guides—from rounded buttons and code snippets to brand application concepts and text tone of voice.
 
-Design System é uma coleção de componentes reutilizáveis, padronizados para determinado produto, site ou sistema. Diferente de um style guide (guia de estilos), um design system vai além: o design system unifica a linguagem de um determinado produto.
+## What is Atomic Design?
 
-Encare o design system não como um projeto, mas como um produto interno da empresa, que precisa de pessoas que o atualizem enquanto desenvolvem soluções novas, novos componentes, novos guias de estilo. De botões arredondados e snippets de códigos a concepções de aplicação de marca, tom de voz de texto.
+![Atomic Design Concept](https://cdn-images-1.medium.com/max/2400/0*fKAp5Ca1nwMDuH2f.jpg)
 
-## O que é o Atomic Design?
+> "Atomic design is a methodology that helps us think about the user interface hierarchically and reinforces the importance of effective pattern libraries, presenting techniques to optimize the workflow of design and development teams. Atomic design also details what happens during the creation and maintenance of design systems, allowing UIs to be implemented with greater consistency and quality." — **Brad Frost**
 
-![](https://cdn-images-1.medium.com/max/2400/0*fKAp5Ca1nwMDuH2f.jpg)
->  O atomic design é uma metodologia que nos ajuda a pensar na interface do usuário de maneira hierarquia e reforça a importância da qualidade de pattern libraries eficazes, apresentando técnicas para otimizar o fluxo de trabalho do design e desenvolvimento em equipe. O atomic design também detalha o que acontece durante a criação e manutenção de sistemas de design, permitindo a implementação de UIs com mais consistência e qualidade.” — **Brad Frost**
+## Advantages of Using Atomic Design in a Design System
 
-## Quais as vantagens de usar o Atomic Design em um Design System?
+![Advantages](https://cdn-images-1.medium.com/max/2000/0*wOqiD_0Lyn5oyXGC)
 
-![](https://cdn-images-1.medium.com/max/2000/0*wOqiD_0Lyn5oyXGC)
+- **Reusable Components** — By creating your own library, you have the necessary elements for any design challenge. You can also mix and match components very easily.
 
-* Componentes Reutilizáveis — Ao criar sua própria biblioteca, você tem à mão os elementos para qualquer desafio de projeto. Você também pode misturar e combinar os componentes de forma muito fácil.
+- **Easily Understandable and Maintainable Layout** — The code of an atomically designed application is generally much easier to read than one created using traditional methods. This holds true not only during development but also in the future when reviewing the application for reference or making minor adjustments.
 
-* Layout facilmente entendível e com facilidade para manuntenção — O código de um aplicativo projetado atomicamente é geralmente muito mais fácil de ler do que um criado de maneira mais tradicional. Isso é verdade não apenas durante o momento da criação, mas no futuro, quando a aplicação estiver sendo revista para referência ou pequenos ajustes.
+- **Fewer Overall Components** — If a developer has a predefined list of atoms, molecules, and organisms before starting an application, they are more likely to use existing components rather than create new ones for small variations.
 
-* Menos componentes em geral — Se um desenvolvedor tiver uma lista de átomos, moléculas e organismos apresentada a ele antes do início da criação de um aplicativo, é mais provável que use o que já existe do que crie novos componentes para pequenas variações.
+## The Atomic Design Methodology by Brad Frost
 
-## A metodologia do Atomic Design proposta por Brad Frost
+![Atomic Design Levels](https://cdn-images-1.medium.com/max/2000/1*eZPt94azWW8dWa0gtHA-QQ.png)
 
-![](https://cdn-images-1.medium.com/max/2000/1*eZPt94azWW8dWa0gtHA-QQ.png)
+Atomic Design is inspired by the concept of atoms and molecules from chemistry and consists of five distinct levels:
 
-O atomic design se inspira no conceito de átomos e moléculas da química, basicamente consiste nestes cinco níveis distintos:
+### Atoms
 
-## Átomos
+In chemistry, atoms are the fundamental building blocks of matter. Think of an atom as a LEGO piece: they are considered the basic components of interfaces that do not require other elements to exist. Buttons, labels, and checkboxes are examples of atoms.
 
-Na química, o átomo se resume à unidade básica da matéria. Pense num átomo como uma peça de lego: eles são considerados os componentes básicos das interfaces, que não precisam de outro elemento para existirem. Portanto botões, labels, caixas de seleção são alguns dos exemplos que entendemos por átomos.
+![Atoms](https://cdn-images-1.medium.com/max/2000/1*3gl7xaspVntN-f9BttIXVw.png)
 
-![](https://cdn-images-1.medium.com/max/2000/1*3gl7xaspVntN-f9BttIXVw.png)
+### Molecules
 
-## Moléculas
+When two or more atoms, whether identical or different, combine, they form molecules with new properties. In our context, molecules in UI development represent the combination of basic interface components to create more tangible elements.
 
-O agrupamento entre dois ou mais átomos, iguais ou diferentes, assumem uma nova propriedade, que na química denominamos de moléculas. Voltando para nosso contexto, moléculas para nós desenvolvedores seria a junção dos componentes básicos da interface passando uma ideia mais tangível aos elementos.
+![Molecules](https://cdn-images-1.medium.com/max/2000/1*DuruBJPJ-zTizR3C0HhRrQ.png)
 
-![](https://cdn-images-1.medium.com/max/2000/1*DuruBJPJ-zTizR3C0HhRrQ.png)
+### Organisms
 
-## Organismos
+Atoms and molecules together form an organized and complex structure. Just as organisms exist in biology and chemistry, in UI design, this structure consists of the combination of atoms and molecules, forming more complex components that guide navigation within a layout.
 
-Os átomos e as moléculas em conjunto formam uma estrutura material organizada e complexa. Como um corpo na biologia ou como um organismo na química, entendemos que nas interfaces essa estrutura consiste na mesclagem entre átomos e moléculas, formando componentes mais complexos que norteiam a navegação dentro de um layout.
+![Organisms](https://cdn-images-1.medium.com/max/2000/1*e_Cce0q54AH3vab6Ez_jHg.png)
 
-![](https://cdn-images-1.medium.com/max/2000/1*e_Cce0q54AH3vab6Ez_jHg.png)
+### Templates
 
-## Templates
+The chemistry analogy does not extend to the next phases. Formed by the union of organisms, templates aim to display the structure of a layout in a simplified way. The key at this stage is to understand how components will interact with each other and whether the composition makes sense.
 
-A comparação com a química não se estende às próximas fases. Formado pela união dos organismos, os templates possuem o intuito de exibir a estrutura de um layout de forma simplificada. O importante nessa etapa é entender como os componentes vão interagir entre si e se a composição faz sentido.
+![Templates](https://cdn-images-1.medium.com/max/2000/1*ZHy9XgkweqCYvoeR3pybhA.png)
 
-![](https://cdn-images-1.medium.com/max/2000/1*ZHy9XgkweqCYvoeR3pybhA.png)
+### Pages
 
-## Páginas
+With organisms, molecules, and atoms working harmoniously together, templates evolve into pages, where real content is added. This final stage is the most concrete part of Atomic Design, as it represents the layout that users will actually interact with in the application.
 
-Com os organismos, moléculas e átomos se comportando harmonicamente entre si, os templates evoluem para páginas, e é aqui que acrescentamos o conteúdo real. A última fase é a etapa mais concreta do atomic design, pois é com esse layout que os usuários vão se deparar ao acessarem seu aplicativo.
-
-![](https://cdn-images-1.medium.com/max/2000/1*k2yPHb7Wl3p3bQH9zcjzvQ.png)
+![Pages](https://cdn-images-1.medium.com/max/2000/1*k2yPHb7Wl3p3bQH9zcjzvQ.png)
